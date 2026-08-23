@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+websockets
+groq
+python-dotenv
+SpeechRecognition
+PyAudio
+edge-tts
+pygame
+psutil
+requests

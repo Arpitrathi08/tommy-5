@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tommy AI v5</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="app">
+
+  <!-- ── TOP BAR ──────────────────────────────────────────────── -->
+  <header>
+    <div class="logo">
+      <div class="logo-box">T</div>
+      <div>
+        <h1>TOMMY</h1>
+        <small>PERSONAL AI ASSISTANT</small>
+      </div>
+    </div>
+
+    <!-- Status bar: live system stats -->
+    <div class="status-bar">
+      <span id="sysCpu" class="stat-chip">CPU --</span>
+      <span id="sysRam" class="stat-chip">RAM --</span>
+      <span id="sysBat" class="stat-chip">🔋 --</span>
+      <span id="sysTime" class="stat-chip time-chip">--:--</span>
+    </div>
+
+    <div class="online"><span></span> ONLINE</div>
+  </header>
+
+
+  <!-- ── QUICK ACTIONS ────────────────────────────────────────── -->
+  <div id="quickActions" class="quick-actions">
+    <button class="qa-btn" onclick="quickSearch()">
+      🔍 <span>Google</span>
+    </button>
+    <button class="qa-btn" onclick="quickYouTube()">
+      ▶️ <span>YouTube</span>
+    </button>
+    <button class="qa-btn" onclick="quickWeather()">
+      🌤️ <span>Weather</span>
+    </button>
+    <button class="qa-btn" onclick="quickSysStatus()">
+      🖥️ <span>System</span>
+    </button>
+  </div>
+
+
+  <!-- ── MAIN ─────────────────────────────────────────────────── -->
+  <main>
+
+    <div id="orb" class="orb">
+      <div class="ring ring1"></div>
+      <div class="ring ring2"></div>
+      <div class="tommy-face">
+        <div class="eyes">
+          <div class="eye"></div>
+          <div class="eye"></div>
+        </div>
+        <div id="mouth" class="mouth"></div>
+      </div>
+    </div>
+
+    <h2 id="state">TOMMY READY</h2>
+    <p id="substate">Click <b>🎤</b> and talk to me</p>
+
+    <!-- Mode badge -->
+    <div id="modeLabel" class="mode-badge mode-normal">💬 NORMAL MODE</div>
+
+    <button id="micButton" class="mic">🎤</button>
+
+  </main>
+
+
+  <!-- ── WEATHER CARD (overlay) ────────────────────────────────── -->
+  <div id="weatherCard" class="float-card wx-card"></div>
+
+  <!-- ── SYSTEM CARD (overlay) ─────────────────────────────────── -->
+  <div id="sysCard" class="float-card sys-card"></div>
+
+
+  <!-- ── CHAT PANEL ────────────────────────────────────────────── -->
+  <aside id="chatPanel" class="chat-panel">
+    <div class="chat-header">
+      <div>
+        <h3>Tommy Chat</h3>
+        <small>Conversation</small>
+      </div>
+      <button id="closeChat">×</button>
+    </div>
+
+    <div id="messages" class="messages">
+      <div class="message tommy">
+        <div class="avatar">T</div>
+        <div class="bubble">
+          <div class="mode-pill mode-normal">💬 NORMAL</div>
+          <div class="msg-body">
+            Hey Sir 👋 I'm Tommy v5!<br><br>
+            I can detect <b>Coding</b>, <b>Study</b>, and <b>Normal</b> modes automatically.
+            Use the quick actions above for Google, YouTube, Weather, and System status.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-input">
+      <input id="textInput" placeholder="Type to Tommy...">
+      <button id="sendButton">➤</button>
+    </div>
+  </aside>
+
+
+  <!-- ── CHAT TOGGLE BUTTON ────────────────────────────────────── -->
+  <button id="chatButton" class="chat-button">💬</button>
+
+
+  <footer>
+    GROQ AI <span>•</span> PYTHON VOICE ENGINE <span>•</span> TOMMY v5
+  </footer>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
