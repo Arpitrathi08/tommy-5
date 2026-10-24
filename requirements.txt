@@ -9,3 +9,4 @@ edge-tts
 pygame
 psutil
 requests
+uagents>=0.25.5
